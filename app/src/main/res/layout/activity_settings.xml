@@ -99,5 +99,16 @@
         android:paddingTop="8dp"
         android:text="@string/restore_backup"
         android:textSize="18sp" />
+    <TextView
+        android:id="@+id/rate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        android:text="Rate App"
+        android:textSize="18sp" />
 
 </LinearLayout>

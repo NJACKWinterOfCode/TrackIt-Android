@@ -55,6 +55,7 @@ public class SettingsActivity extends AppCompatActivity {
     private TextView tvBackup;
     private TextView tvRestore;
     private TextView tvAddTraktShows;
+    private TextView rate;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -67,7 +68,16 @@ public class SettingsActivity extends AppCompatActivity {
         tvBackup = (TextView) findViewById(R.id.tv_backup);
         tvRestore = (TextView) findViewById(R.id.tv_restore);
         tvAddTraktShows = (TextView) findViewById(R.id.tv_trakt_add_all_shows);
-
+        rate=(TextView)findViewById(R.id.rate);
+        rate.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View view) {
+        String url = "https://github.com/chashmeetsingh/TrackIt-Android/stargazers";
+        Intent i = new Intent(Intent.ACTION_VIEW);
+        i.setData(Uri.parse(url));
+        startActivity(i);
+    }
+});
         updateViews();
         setViewListeners();
     }
